@@ -279,26 +279,40 @@ a {
     align-items: center;
 }
 
-.glass-orb {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    color: var(--accent-color);
+/* Profile photo wrapper — keeps the float animation isolated */
+.profile-photo-wrapper {
     animation: float 6s ease-in-out infinite;
+    border-radius: 50%;
+    /* Outer glow ring that pulses with the theme accent */
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.35),
+        0 0 40px 8px rgba(99, 102, 241, 0.25),
+        0 20px 60px -10px rgba(0, 0, 0, 0.6);
+    transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.profile-photo-wrapper:hover {
+    box-shadow:
+        0 0 0 5px rgba(139, 92, 246, 0.6),
+        0 0 55px 14px rgba(139, 92, 246, 0.35),
+        0 24px 70px -10px rgba(0, 0, 0, 0.7);
+    transform: scale(1.04);
+}
+
+.profile-photo {
+    display: block;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center top;
+    border: 3px solid rgba(99, 102, 241, 0.5);
+    transition: transform 0.4s ease;
 }
 
 @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
 }
 
@@ -619,9 +633,10 @@ a {
         margin-bottom: 50px;
     }
     
-    .glass-orb {
-        width: 250px;
-        height: 250px;
+    .profile-photo,
+    .profile-photo-wrapper {
+        width: 210px;
+        height: 210px;
     }
     
     .glitch-text {
