@@ -50,17 +50,27 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(typeEffect, 1000);
     }
 
-    // Nav Bar Scroll Effect
-    const nav = document.querySelector('.glass-nav');
+    // Active Link Scroll Highlight
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-links li a');
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            nav.style.background = 'rgba(5, 5, 5, 0.95)';
-            nav.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.5)';
-        } else {
-            nav.style.background = 'rgba(5, 5, 5, 0.8)';
-            nav.style.boxShadow = 'none';
-        }
+        let currentSection = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            if (window.scrollY >= sectionTop - 150) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${currentSection}`) {
+                link.classList.add('active');
+            }
+        });
     });
+
 
     // Intersection Observer for scroll animations (Fade-ins)
     const fadeElements = document.querySelectorAll('.fade-in');
@@ -97,4 +107,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Tab switching logic for Experience Hub
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const tabPanes = document.querySelectorAll('.tab-pane');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.getAttribute('data-tab');
+
+            // Toggle active state on buttons
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Toggle active state on content panes
+            tabPanes.forEach(pane => pane.classList.remove('active'));
+            const targetPane = document.getElementById(tabId);
+            if (targetPane) {
+                targetPane.classList.add('active');
+            }
+        });
+    });
 });
+

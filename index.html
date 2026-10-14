@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio of Tallapudi Salmon Raj - Full Stack Developer, Class Representative, and PR & Outreach Lead for GFG.">
     <title>Salmon Raj | Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=6">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -65,34 +65,103 @@
             <h2 class="section-title fade-in">About & Experience <span class="accent-line"></span></h2>
             
             <div class="about-grid">
+                <!-- Left Column: Bio -->
                 <div class="bio glass-card fade-in">
                     <h3>Who am I?</h3>
-                    <p>I am a highly motivated Computer Science Engineering student (CGPA: 9.35) at Lendi Institute of Engineering and Technology. With a strong foundation in Data Structures, Algorithms, and Object-Oriented Programming, I specialize in Full Stack Development using Java, Spring Boot, React, and Python.</p>
+                    <p>I am a highly motivated Computer Science Engineering student (CGPA: 9.3) at Lendi Institute of Engineering and Technology. With a strong foundation in Data Structures, Algorithms, and Object-Oriented Programming, I specialize in Full Stack Development using Java, Spring Boot, React, and Python.</p>
                     <p>Beyond coding, I am an active student leader, continuously driving community engagement and organizing tech events.</p>
                     <div class="hero-cta" style="margin-top: 25px;">
                         <a href="RESUME.pdf" target="_blank" class="btn primary-btn"><i class="fas fa-eye"></i> View Resume</a>
                         <a href="RESUME.pdf" download="Tallapudi_Salmon_Raj_Resume.pdf" class="btn secondary-btn"><i class="fas fa-download"></i> Download Resume</a>
                     </div>
                 </div>
-                
-                <div class="leadership glass-card fade-in">
-                    <h3>Leadership Roles</h3>
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h4>PR & Outreach Lead</h4>
-                                <h5>GeeksforGeeks Campus Mantri Program (2025 – 2026)</h5>
-                                <p>Led outreach initiatives and organized technical events, significantly increasing student engagement in coding activities across the campus.</p>
+
+                <!-- Right Column: Interactive Experience Hub -->
+                <div class="experience-hub glass-card fade-in">
+                    <div class="tab-nav">
+                        <button class="tab-btn active" data-tab="work">
+                            <i class="fas fa-briefcase"></i> Experience
+                        </button>
+                        <button class="tab-btn" data-tab="leadership">
+                            <i class="fas fa-users"></i> Leadership
+                        </button>
+                        <button class="tab-btn" data-tab="certs">
+                            <i class="fas fa-award"></i> Certifications
+                        </button>
+                    </div>
+
+                    <div class="tab-content">
+                        <!-- Work Experience Pane -->
+                        <div class="tab-pane active" id="work">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>Java Full Stack Developer Intern</h4>
+                                        <h5>Vayvora Technologies Private Limited (Jul 2026 – Present)</h5>
+                                        <ul>
+                                            <li>Engineered backend services for PaiseWise, reducing API response time by 35% through performance optimization.</li>
+                                            <li>Designed and deployed 10+ REST APIs using Spring Boot and microservices architecture, supporting scalable backend operations.</li>
+                                            <li>Implemented secure authentication and authorization using Spring Security, JWT, and BCrypt, reducing unauthorized access risks by 40%.</li>
+                                            <li>Integrated Spring Cloud Gateway and Netflix Eureka for service discovery, improving system availability and fault tolerance by 20%.</li>
+                                            <li>Applied database-per-service architecture using PostgreSQL and H2, improving data isolation and scalability across services.</li>
+                                            <li>Collaborated in Agile teams of 5+ developers using Git, reducing merge conflicts and improving deployment cycles.</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-dot"></div>
-                            <div class="timeline-content">
-                                <h4>Class Representative</h4>
-                                <h5>Lendi Institute of Engineering and Technology</h5>
-                                <p>Act as the primary liaison between students and faculty, ensuring smooth communication and resolving academic concerns effectively.</p>
+
+                        <!-- Leadership Pane -->
+                        <div class="tab-pane" id="leadership">
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>PR & Outreach Lead</h4>
+                                        <h5>GeeksforGeeks Campus Mantri Program (2025 – 2026)</h5>
+                                        <p>Led outreach initiatives and organized technical events, significantly increasing student engagement in coding activities across the campus.</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-content">
+                                        <h4>Class Representative</h4>
+                                        <h5>Lendi Institute of Engineering and Technology</h5>
+                                        <p>Act as the primary liaison between students and faculty, ensuring smooth communication and resolving academic concerns effectively.</p>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+
+                        <!-- Certifications Pane -->
+                        <div class="tab-pane" id="certs">
+                            <ul class="cert-list">
+                                <li>
+                                    <div class="cert-info">
+                                        <span class="cert-title">ServiceNow Certified System Administrator (CSA)</span>
+                                        <span class="cert-date">Jul 2026</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cert-info">
+                                        <span class="cert-title">EduSkills – Prompt Engineering for AI</span>
+                                        <span class="cert-date">2026</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cert-info">
+                                        <span class="cert-title">EduSkills – Java Full Stack Development</span>
+                                        <span class="cert-date">2025</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="cert-info">
+                                        <span class="cert-title">Versant English Communication Certification</span>
+                                        <span class="cert-date">2024</span>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -103,34 +172,81 @@
         <section id="skills" class="skills section-spacing">
             <h2 class="section-title fade-in">Technical Arsenal <span class="accent-line"></span></h2>
             <div class="skills-container fade-in">
+                <!-- 1. Programming Languages -->
                 <div class="skill-category glass-card">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <h3><i class="fas fa-code"></i> Languages</h3>
                     <div class="skill-tags">
                         <span>Java</span>
-                        <span>Spring Boot</span>
                         <span>Python</span>
-                        <span>REST APIs</span>
-                        <span>PHP</span>
-                        <span>Java Servlets</span>
+                        <span>C</span>
+                        <span>C++</span>
+                        <span>JavaScript</span>
+                        <span>SQL</span>
                     </div>
                 </div>
+
+                <!-- 2. Backend Engineering -->
                 <div class="skill-category glass-card">
-                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <h3><i class="fas fa-server"></i> Backend Engineering</h3>
                     <div class="skill-tags">
+                        <span>Spring Boot</span>
+                        <span>Microservices</span>
+                        <span>REST APIs</span>
+                        <span>Hibernate</span>
+                        <span>Spring Cloud</span>
+                        <span>Maven</span>
+                    </div>
+                </div>
+
+                <!-- 3. Frontend Development -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span>React.js</span>
+                        <span>Tailwind CSS</span>
                         <span>HTML5</span>
                         <span>CSS3</span>
                         <span>JavaScript</span>
-                        <span>React.js</span>
-                        <span>Tailwind CSS</span>
+                        <span>Thymeleaf</span>
                     </div>
                 </div>
+
+                <!-- 4. Databases & Cloud -->
                 <div class="skill-category glass-card">
-                    <h3><i class="fas fa-database"></i> Databases & Tools</h3>
+                    <h3><i class="fas fa-database"></i> Databases & Cloud</h3>
                     <div class="skill-tags">
+                        <span>PostgreSQL</span>
                         <span>MySQL</span>
-                        <span>Git/GitHub</span>
-                        <span>Maven</span>
-                        <span>TensorFlow/Keras</span>
+                        <span>MongoDB</span>
+                        <span>Supabase</span>
+                        <span>SQL Optimization</span>
+                    </div>
+                </div>
+
+                <!-- 5. Security & Dev Tools -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-shield-alt"></i> Security & Dev Tools</h3>
+                    <div class="skill-tags">
+                        <span>Spring Security</span>
+                        <span>JWT</span>
+                        <span>OAuth2</span>
+                        <span>RBAC</span>
+                        <span>Git & GitHub</span>
+                        <span>VS Code</span>
+                        <span>IntelliJ IDEA</span>
+                    </div>
+                </div>
+
+                <!-- 6. Core Computer Science -->
+                <div class="skill-category glass-card">
+                    <h3><i class="fas fa-brain"></i> Core Computer Science</h3>
+                    <div class="skill-tags">
+                        <span>Data Structures</span>
+                        <span>Algorithms</span>
+                        <span>OOP</span>
+                        <span>System Design</span>
+                        <span>Operating Systems</span>
+                        <span>DBMS</span>
                     </div>
                 </div>
             </div>
@@ -141,68 +257,81 @@
             <h2 class="section-title fade-in">Featured Projects <span class="accent-line"></span></h2>
             
             <div class="project-grid">
-                <!-- Project 1 -->
+                <!-- Project 1: OPRM System -->
                 <div class="project-card glass-card fade-in">
                     <div class="project-content">
                         <div class="project-header">
                             <i class="fas fa-project-diagram project-icon"></i>
                             <div class="project-links">
                                 <a href="https://github.com/Salmon3740/oprm-system" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                                <a href="https://oprm-system.onrender.com/" target="_blank" class="live-demo-btn"><span class="live-dot"></span>Live Demo</a>
                             </div>
                         </div>
                         <h3 class="project-title">OPRM System</h3>
-                        <p class="project-description">Online Project Resource Management platform featuring AI-based mentor matching using TF-IDF and cosine similarity, built with role-based JWT authentication.</p>
+                        <p class="project-description">A full-stack academic project resource management system to manage 100+ projects. Features REST APIs for tracking, JWT authentication, and AI recommendation using TF-IDF and cosine similarity.</p>
                         <div class="project-tech">
                             <span>Java</span><span>Spring Boot</span><span>React</span><span>Python</span><span>MySQL</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
+                <!-- Project 2: Placement Tracker -->
+                <div class="project-card glass-card fade-in">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <i class="fas fa-chart-line project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/Salmon3740/oprm-system" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Placement Tracker</h3>
+                        <p class="project-description">A web application to monitor and streamline college recruitment cycles. Features interactive Chart.js analytics dashboards, role-based access control, Excel import/export, and cloud sync via Supabase.</p>
+                        <div class="project-tech">
+                            <span>React</span><span>Vite</span><span>Tailwind CSS</span><span>Chart.js</span><span>Supabase</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: SmartWaste AI -->
                 <div class="project-card glass-card fade-in">
                     <div class="project-content">
                         <div class="project-header">
                             <i class="fas fa-leaf project-icon"></i>
                             <div class="project-links">
                                 <a href="https://github.com/Salmon3740/smartwaste-using-CNN" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                                <a href="https://smartwaste.onrender.com/" target="_blank" class="live-demo-btn"><span class="live-dot"></span>Live Demo</a>
                             </div>
                         </div>
                         <h3 class="project-title">SmartWaste AI</h3>
-                        <p class="project-description">A CNN-based waste classification system that tracks eco-points for sustainability. Integrates a Flask ML API with a Spring Boot backend.</p>
+                        <p class="project-description">An AI-powered classification system achieving 85%+ accuracy in waste detection. Integrates neural network models with backend APIs for real-time predictions and database scaling.</p>
                         <div class="project-tech">
                             <span>Python</span><span>TensorFlow</span><span>Flask</span><span>Spring Boot</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
+                <!-- Project 4: Sunday School MS -->
                 <div class="project-card glass-card fade-in">
                     <div class="project-content">
                         <div class="project-header">
                             <i class="fas fa-church project-icon"></i>
                             <div class="project-links">
                                 <a href="https://github.com/Salmon3740/sundayschool" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                                <a href="https://sundayschool-production-20a8.up.railway.app/login" target="_blank" class="live-demo-btn"><span class="live-dot"></span>Live Demo</a>
                             </div>
                         </div>
                         <h3 class="project-title">Sunday School MS</h3>
-                        <p class="project-description">Web-based system to manage student records, attendance, and class activities securely, implementing robust CRUD operations and role-based access.</p>
+                        <p class="project-description">A secure web-based student record management system for 200+ student profiles. Designed optimized RESTful SQL database queries, improving record retrieval performance by 30%.</p>
                         <div class="project-tech">
                             <span>Java</span><span>Spring Boot</span><span>MySQL</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
+                <!-- Project 5: Course Registration -->
                 <div class="project-card glass-card fade-in">
                     <div class="project-content">
                         <div class="project-header">
                             <i class="fas fa-graduation-cap project-icon"></i>
                             <div class="project-links">
                                 <a href="https://github.com/Salmon3740/course-registration" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                                <a href="https://course-registration-production-616f.up.railway.app/" target="_blank" class="live-demo-btn"><span class="live-dot"></span>Live Demo</a>
                             </div>
                         </div>
                         <h3 class="project-title">Course Registration</h3>
@@ -213,14 +342,13 @@
                     </div>
                 </div>
 
-                <!-- Project 5 -->
+                <!-- Project 6: TMCF Worship Audio -->
                 <div class="project-card glass-card fade-in">
                     <div class="project-content">
                         <div class="project-header">
                             <i class="fas fa-music project-icon"></i>
                             <div class="project-links">
                                 <a href="https://github.com/Salmon3740/tmcf-worship-audio" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
-                                <a href="https://audio-backend-production-c2f8.up.railway.app/" target="_blank" class="live-demo-btn"><span class="live-dot"></span>Live Demo</a>
                             </div>
                         </div>
                         <h3 class="project-title">TMCF Worship Audio</h3>
@@ -240,14 +368,15 @@
             <h2>Let's build something amazing.</h2>
             <p>Currently seeking an entry-level Java Full Stack Developer role.</p>
             <div class="social-links">
-                <a href="mailto:salmanraajtaallapudi@gmail.com" class="social-icon" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="mailto:salmanraajtaallapudi@gmail.com" class="social-icon" title="Email: salmanraajtaallapudi@gmail.com"><i class="fas fa-envelope"></i></a>
+                <a href="tel:+918341875871" class="social-icon" title="Call: +91 8341875871"><i class="fas fa-phone"></i></a>
                 <a href="https://github.com/Salmon3740" target="_blank" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com/in/salmon-tallapudi" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.linkedin.com/in/tallapudi-salmon-raj" target="_blank" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
             </div>
             <p class="copyright">&copy; <span id="year"></span> Tallapudi Salmon Raj. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=5"></script>
 </body>
 </html>
